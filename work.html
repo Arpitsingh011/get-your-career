@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .slider-container {
+      width: 300%; /* Adjust the width based on the number of images */
+      height: 100vh;
+      white-space: nowrap;
+      animation: slide 10s linear infinite; /* Adjust the duration based on your preference */
+    }
+
+    .slider-image {
+      width: 100vw;
+      height: 100%;
+      display: inline-block;
+      background-size: cover;
+    }
+
+    @keyframes slide {
+      0%, 100% {
+        transform: translateX(0);
+      }
+      25% {
+        transform: translateX(-100%);
+      }
+      50% {
+        transform: translateX(-200%);
+      }
+      75% {
+        transform: translateX(-300%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="slider-container">
+    <div class="slider-image" style="background-image: url('i');"></div>
+    <div class="slider-image" style="background-image: url('image2.jpg');"></div>
+    <div class="slider-image" style="background-image: url('image3.jpg');"></div>
+    <!-- Add more image divs as needed -->
+  </div>
+</body>
+</html>

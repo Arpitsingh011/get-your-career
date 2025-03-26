@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetsYourCollege</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            margin: 20px;
+            background: url("roli.png.jpg");
+            background-size: cover; /* You can use other values like 'contain' */
+           background-position: center center; /* Adjust as needed */
+           background-repeat: no-repeat; /* Prevent repeating the background image */
+            background-attachment: fixed; /* Fixed background scrolling */
+  
+            
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            color: #fff;
+        }
+
+        .navMenu {
+            overflow: hidden;
+            background-color: lightblue;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .navMenu a{
+            display: inline-block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            border-radius: 16px;
+            margin: 0 10px;
+            background-color: lightblue;
+            color: #fff;
+            padding-left: 16px;
+        }
+
+        .navMenu a:hover {
+            background-color: black;
+        }
+
+        @media screen and (max-width: 768px) {
+            .navMenu a:not(:first-child) {
+                display: none;
+            }
+
+            .navMenu a.icon {
+                display: block;
+            }
+
+            .navMenu.mobileView p {
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+        }
+
+        #search-container {
+            text-align: center;
+            margin-bottom: -30px;
+            margin-left: -500px;
+            transition: 0.5s;
+            opacity: 0;
+            border-radius: 16px;
+            
+        }
+
+        #result-container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        #result-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .state-item, .city-item {
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid #050505;
+            margin-bottom: 5px;
+            transition: background-color 0.3s;
+            border-radius: 16px;
+            margin-right:300px;
+        }
+
+        .state-item:hover, .city-item:hover {
+            background-color: #211e1e;
+            color: white;
+        }
+       #uttar-pradesh-cities li{
+        text-decoration:none;
+        text-wrap:nowrap;
+       }
+       #search{
+        border-radius: 16px;
+        color: #f2f2f2;
+       }
+
+       .a{
+        color: black;
+        text-decoration: none;
+       }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>GetsYourCollege</h1>
+    </header>
+    <nav>
+        <div class='navMenu' id='navMenuId'>
+           <a href="Lucknow.html">B.tech</a>
+           <a href="b.com.html">B.Com</a>
+           <a href="b.sc1.html">B.Sc</a>
+           <a href="nursing.html">B.Sc(nursing)</a>
+        </div>
+    <script>
+    </script>
+</body>
+</html>
