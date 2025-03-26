@@ -1,0 +1,34 @@
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+}
+#nav{
+    color: red;
+    border-radius: 16px;
+    font-size: large;
+}
+#nav li{
+    float: left;
+    list-style: none;
+}
+#nav ul{
+    overflow: auto;
+}
+#nav ul li button{
+    border-radius: 16px;
+    padding: 40px;
+    letter-spacing: 10px;
+   margin: 10px 10px;
+   margin-right: 10px;
+}
+img{
+    float: right;
+    padding-top: 10px;
+    margin: -10px -10px;
+}
+.pcm{
+    padding: 20px;
+    display: fixed;
+}
