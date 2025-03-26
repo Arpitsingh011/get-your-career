@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #cars {
+            border: 1px solid black;
+            border-radius: 16px;
+            padding: 8px;
+            width: 100%;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <select id="cars" onchange="updateState()">
+        </select>
+    </div>
+
+    <script>
+        // Array of Indian states
+        var indianStates = [
+            "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh", "Goa",
+            "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand", "Karnataka", "Kerala",
+            "Madhya Pradesh", "Maharashtra", "Mizoram", "Nagaland", "Odisha", "Punjab",
+            "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana", "Tripura", "Uttar Pradesh",
+            "West Bengal"
+        ];
+
+        var selectElement = document.getElementById('cars');
+
+        // Populate the select element with options
+        for (var i = 0; i < indianStates.length; i++) {
+            var option = document.createElement('option');
+            option.value = indianStates[i];
+            option.text = indianStates[i];
+            selectElement.add(option);
+        }
+
+        function updateState() {
+            var selectedState = selectElement.value;
+            console.log('Selected State:', selectedState);
+            // Add your logic here
+        }
+    </script>
+</body>
+</html>
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+Goa
+Gujarat
+Haryana
+Himachal Pradesh
+Jharkhand
+Karnataka
+Kerala
+Madhya Pradesh
+Maharashtra
+Manipur
+Meghalaya
+Mizoram
+Nagaland
+Odisha
+Punjab
+Rajasthan
+Sikkim
+Tamil Nadu
+Telangana
+Tripura
+Uttar Pradesh
+Uttarakhand
+WesBengalt 
+

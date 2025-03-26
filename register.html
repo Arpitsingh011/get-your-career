@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Registration Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            object-fit: cover;
+            width: 100%;
+            background-image: url("shobhitchahat.jpg");
+            background-size: cover; /* You can use other values like 'contain' */
+            background-position: center center; /* Adjust as needed */
+            background-repeat: no-repeat; /* Prevent repeating the background image */
+            background-attachment: fixed; /* Fixed background scrolling */
+   
+        }
+
+        form {
+            background-color: transparent;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(1, 0, 0, 0.9);
+            width: 300px;
+            transition: box-shadow 0.3s ease;
+            position: relative;
+            text-align: center;
+        }
+
+        form:hover {
+            box-shadow: 0 0 30px rgba(3, 3, 3, 0.9);
+            transform: scale(1.1);
+            z-index: 1.1;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            transition: color 0.3s ease;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #bbb;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        input:hover,
+        input:focus {
+            border-color: transparent;
+        }
+
+        input[type="submit"] {
+            background-color: transparent;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover 
+        {
+            background-color: #021420;
+        }
+
+        /* Background pattern */
+        body::before {
+            content:'';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width:100%;
+            height:100vh;
+            z-index: -1;
+
+        }
+   form input{
+    border-radius: 16px;
+   }
+        
+    </style>
+</head>
+<body>
+    <form action="registration_process.php" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="username" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="E-mail" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="passward" required>
+
+        <label for="confirm_password">Confirm Password:</label>
+        <input type="password" id="confirm_password" name="confirm_password" placeholder="confirm_password" required>
+
+        <input type="submit" value="Register">
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body html{
+        width: 100%;
+        height: 100vh;
+    }
+        #cars {
+            border: 1px solid black;
+            border-radius: 16px;
+            padding: 8px; /* Added padding for better appearance */
+            width: 100%; /* Make the select element full width */
+            font-size: 16px; /* Adjust font size */
+            margin: 10px 0; /* Add margin for spacing */
+        }
+    </style>
+</style>
+<body>
+    <div>
+        <select id="cars" onchange="updateState()">
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            <option value="Assam">Assam</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chhattisgarh">Chhattisgarh</option>
+            <option value="Goa"> Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Himachal Pradesh">Himachal Pradesh</option>
+            <option value="Jharkhand">Jharkhand</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Mizoram">Mizoram</option>
+            <option value="Nagaland">Nagaland</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Sikkim">Sikkim</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Telangana">Telangana </option>
+            <option value="Tripura">Tripura</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="West Bengal">West Bengal</option>
+            </select>
+    </div>
+</head>
+<body>
+    <script>
+        function updateState() {
+            var selectElement = document.getElementById('cars');
+            var selectedState = selectElement.value;
+
+            // You can do something with the selected state, for example, log it to the console
+            console.log('Selected State:', selectedState);
+        }
+    </script>
+</body>
+</html>
+
+</body>
+</html>

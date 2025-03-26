@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State and City Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #search-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #result-container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        #result-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .state-item, .city-item {
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .state-item:hover, .city-item:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="search-container">
+        <label for="search">Search:</label>
+        <input type="text" id="search" oninput="search()">
+    </div>
+
+    <div id="result-container">
+        <ul id="result-list"></ul>
+    </div>
+
+    <script>
+        const data = {
+            "uttar pradesh": ["Agra","Aligarh","Allahabad (Prayagraj)","Amroha","Ayodhya (Faizabad)","Azamgarh","Baghpat","Bahraich","Ballia","Balrampur",
+"Banda","Barabanki","Bareilly","Basti","Bijnor","Bulandshahr",
+"Chandauli","Chitrakoot","Deoria","Etah","Etawah","Faizabad","Farrukhabad", "Fatehpur",
+ "Firozabad", "Gautam", "Buddh Nagar (Greater Noida, Noida)"," Ghaziabad", "Ghazipur","Gonda" ,
+ "Gorakhpur", "Hamirpur", "Hapur", "Hardoi"," Hathras", "Jalaunaunpur","Jhansi", "Kannauj ", "Kanpur", "Kaushambi", 
+ "Kheri", "Kushinagar", "Lalitpur", "Lucknow", "Maharajganj", "Mahoba", "Mainpuri", "Mathura", "Mau", "Meerut", "Mirzapur",
+  "Moradabad", "Muzaffarnagar", "Pilibhit", "Pratapgarh", "Rae Bareli", "Rampur", "Saharanpur", "Sambhal", "Sant Kabir Nagar", 
+  "Sant Ravidas Nagar (Bhadohi)", "Shahjahanpur", "Shamli", "Shravasti", "Siddharthnagar", "Sitapur", "Sonbhadra", "Sultanpur",
+   "Unnao", "Varanasi"],
+        };
+
+        function search() {
+            const searchTerm = document.getElementById('search').value.toLowerCase();
+            const resultList = document.getElementById('result-list');
+            resultList.innerHTML = '';
+
+            for (const state in data) {
+                if (state.toLowerCase().includes(searchTerm)) {
+                    const stateItem = document.createElement('li');
+                    stateItem.className = 'state-item';
+                    stateItem.textContent = state;
+                    stateItem.addEventListener('click', () => showCities(state));
+                    resultList.appendChild(stateItem);
+                }
+
+                for (const city of data[state]) {
+                    if (city.toLowerCase().includes(searchTerm)) {
+                        const cityItem = document.createElement('li');
+                        cityItem.className = 'city-item';
+                        cityItem.textContent = city;
+                        resultList.appendChild(cityItem);
+                    }
+                }
+            }
+        }
+
+        function showCities(state) {
+            const resultList = document.getElementById('result-list');
+            resultList.innerHTML = '';
+
+            for (const city of data[state]) {
+                const cityItem = document.createElement('li');
+                cityItem.className = 'city-item';
+                cityItem.textContent = city;
+                resultList.appendChild(cityItem);
+            }
+        }
+    </script>
+
+</body>
+</html>

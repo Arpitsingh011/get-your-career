@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <style>
+         body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        #navbar {
+            background-color: #000000;
+            overflow: hidden;
+        }
+
+        #navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 25px 23px;
+            text-decoration: none;
+            justify-content: space-around;
+            align-items:center;
+            display: fixed;
+        }
+
+        #navbar a:hover {
+            background-color: #c46f6f;
+            color: #f9f6f6;
+        }
+
+        #navbar a.logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        #navbar .icon {
+            display: none;
+            float: right;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 600px) {
+            #navbar a:not(.icon) {
+                display: none;
+            }
+
+            #navbar a.icon {
+                display: block;
+            }
+
+            #navbar.responsive a.icon {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+            #navbar.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+        #page1 {
+            min-height: 100vh;
+            width: 100%;
+            position: relative;
+            padding-top: 19vh;
+            padding: 0 3vw;
+            letter-spacing: -8px;
+        }
+
+        #page1 h1 {
+            font-size: 11vw;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-transform: uppercase;
+            line-height: 9vw;
+            letter-spacing: -5px;
+            margin: 0;
+            text-align: center;
+
+        }
+
+        #video-container {
+            height: 100vh;
+            background-color: gray;
+            margin-top: 3px;
+            width: 100%;
+            position: relative;
+            padding-top: -30px;
+        }
+
+        #video-container video {
+            height: 100vh;
+            object-fit: cover;
+            width: 100%;
+            position: relative;
+            justify-content: left;
+        }
+
+        #video-container #play {
+            padding: 4vw 2vw;
+            background-color: rgb(23, 22, 22);
+            color: #fff;
+            font-size: 2.2vw;
+            position: fixed;
+            text-transform: uppercase;
+            border-radius: 50%;
+            opacity: 0;
+            transform: scale(0); /* Corrected the property */}
+                .slideshow-container {
+                  max-width: 800px;
+                  position: relative;
+                  margin: auto;
+                }
+            
+                .mySlides {
+                  display: none;
+                }
+            
+                img {
+                  width: 100%;
+                  height: auto;
+                }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <a href="shobhit mini.html">Home</a>
+        <a href="register.html">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+            &#9776;
+        </a>
+    </div>
+    </div>
+    <div id="parent">
+        <div id="page1">
+            <h1>get your career</h1>
+            <div id="video-container">
+                <video autoplay loop muted scr="buger/mini project 1.mp4"></video>
+                  </div>
+           </div>
+            </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+                function toggleNavbar() {
+            var x = document.getElementById("navbar");
+            if (x.className === "") {
+                x.className = "responsive";
+            } else {
+                x.className = "";
+            }
+        }
+        let videocon = document.querySelector("#video-container");
+        let playbtn = document.querySelector("#play");
+        videocon.addEventListener("mouseenter", function () {
+            gsap.to(playbtn, {
+                scale: 1,
+                opacity: 1
+            });
+        });
+        videocon.addEventListener("mouseleave", function () { // Corrected the event
+            gsap.to(playbtn, {
+                scale: 0,
+                opacity: 0
+            });
+        });
+        videocon.addEventListener("mousemove", function (dets) {
+            gsap.to(playbtn, {
+                left: dets.x,
+                top: dets.y
+            });
+        });
+    </script>
+</body>
+</html>
+
